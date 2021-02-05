@@ -1,0 +1,452 @@
+:root {
+    --grisoscuro: #060301;
+    --naranja-oscuro: #e63d0a;
+    --celeste-claro: #0484BF;
+    --celeste-oscuro: #082C47;
+    --celeste-medio: #215573;
+    --blanco-hueso: #f6f6f6;
+}
+
+.banner-title {
+    background: url(../assets/banner2.jpg);
+    height: 580px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    margin-top: -35px;
+}
+
+.banner-title::after {
+    content: "";
+    background: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 40;
+}
+
+.banner-title h1 {
+    position: relative;
+    width: 100%;
+    z-index: 50;
+    color: #fff;
+    text-align: center;
+    padding-top: 70px;
+    font-size: 3em;
+    text-shadow: 2px 2px 10px #000;
+    opacity: 0;
+    animation: opacity 2s ease forwards;
+}
+
+.banner-title h1 span {
+    display: block;
+}
+
+.banner-title h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.4em;
+    position: relative;
+    z-index: 50;
+    text-shadow: 2px 2px 10px #000;
+    width: 90%;
+    margin: auto;
+    margin-top: -15px;
+    opacity: 0;
+    font-weight: 600;
+    animation: opacity 2s 0.2s ease forwards;
+    max-width: 280px;
+}
+
+.banner-icon {
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    color: #fff;
+    position: relative;
+    z-index: 50;
+    display: ruby;
+    filter: drop-shadow(2px 2px 10px #000);
+    margin-top: 10px;
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: opacity 1s 0.4s ease forwards;
+}
+
+.banner-button {
+    text-align: center;
+}
+
+.banner-button a {
+    padding: 15px 25px;
+    font-weight: 600;
+    background: var(--celeste-claro);
+    border-radius: 40px;
+    z-index: 50;
+    position: relative;
+    display: inline-block;
+    color: var(--blanco-hueso);
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.425));
+    transition: 0.4s ease;
+    transform: scale(0);
+    opacity: 0;
+    animation: scale 0.8s 0.5s ease forwards;
+}
+
+.banner-button a:active {
+    transform: scale(0.95);
+}
+
+.banner-sponsors {
+    padding: 20px 0;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.185);
+}
+
+.banner-sponsors span {
+    font-weight: 700;
+    display: inline-block;
+    padding-bottom: 15px;
+    opacity: 0.7;
+}
+
+.sponsors-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsors-img img {
+    width: 70px;
+    margin: 0 15px;
+    filter: grayscale(2);
+}
+
+.us {
+    padding: 40px 0;
+}
+
+.us-back {
+    background: url(../assets/us.jpg);
+    width: 90%;
+    margin: auto;
+    height: 300px;
+    background-size: cover;
+    background-position: 40%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 4px 10px 20px 6px rgba(0, 0, 0, 0.109);
+}
+
+.us-back-two {
+    background: url(../assets/gettyimages-83319528-612x612.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.us-back-three {
+    background: url(../assets/326px-Guatemala_department_location_map.svg.png);
+    background-position: center;
+    background-size: contain;
+}
+
+.us-back:hover>.us-back-logo {
+    opacity: 1;
+}
+
+.us-back:hover::after {
+    left: 0;
+}
+
+.us-back:hover::before {
+    right: 0;
+}
+
+.us-back-logo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.637);
+    transition: 0.3s ease;
+    opacity: 0;
+}
+
+.us-back-logo img {
+    width: 180px;
+}
+
+.us-back::after {
+    content: "";
+    width: 200px;
+    height: 4px;
+    background: var(--naranja-oscuro);
+    position: absolute;
+    bottom: 15px;
+    left: -100%;
+    transition: 0.4s ease;
+    border-radius: 50px;
+    z-index: 50;
+}
+
+.us-back::before {
+    content: "";
+    width: 200px;
+    height: 4px;
+    background: var(--naranja-oscuro);
+    position: absolute;
+    top: 15px;
+    right: -100%;
+    transition: 0.4s ease;
+    border-radius: 50px;
+    z-index: 50;
+}
+
+.us-des {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.us-des b {
+    font-weight: 600;
+    color: var(--naranja-oscuro);
+}
+
+.us-container .more {
+    margin: 30px 0;
+    font-size: 1.1em;
+}
+
+.ben {
+    background: var(--celeste-medio);
+    padding: 40px 0;
+    color: #fff;
+}
+
+.ben-container {
+    margin-top: 45px;
+}
+
+.ben-card {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.ben-icon {
+    border-radius: 50%;
+    min-width: 65px;
+    min-height: 65px;
+    margin-right: 15px;
+    background: var(--celeste-oscuro);
+    display: flex;
+    color: #fff;
+    font-size: 1.9em;
+    justify-content: center;
+    align-items: center;
+}
+
+.ben-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.plans {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.plans h2~span {
+    font-weight: 600;
+    font-size: 0.8em;
+    background: rgba(219, 29, 12, 0.246);
+    text-align: center;
+    width: 85%;
+    margin: 10px auto;
+    display: inline-block;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+.plans-container p {
+    font-weight: 600;
+    margin: 10px auto;
+}
+
+.plan-card {
+    width: 90%;
+    margin: 30px auto 60px auto;
+    border: 2px dashed #064a6932;
+    border-radius: 20px;
+    padding: 20px 5px;
+    background: rgb(245, 245, 245);
+}
+
+.plan-card h3 {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    width: 85%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.plan-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan-img img {
+    width: 85%;
+    margin: auto;
+    max-width: 255px;
+}
+
+.plan-card ul {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.plan-card ul li {
+    font-size: 0.95em;
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.plan-card ul li .icon {
+    color: rgb(25, 214, 18);
+    margin-right: 4px;
+}
+
+.plan-card ul li:last-child {
+    margin-bottom: 10px;
+}
+
+.plan-card .more {
+    margin-top: 20px;
+}
+
+.contact {
+    margin-top: -20px;
+}
+
+.contact h2 {
+    font-size: 2.2em;
+}
+
+.contact h2~p {
+    text-align: center;
+    font-weight: 600;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.form-img {
+    width: 100%;
+    height: 200px;
+    background: url(../assets/trato.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 4px 10px 20px 6px rgba(0, 0, 0, 0.1);
+}
+
+#form {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 4px 10px 40px 6px rgba(0, 0, 0, 0.109);
+    padding: 20px;
+}
+
+#form input,
+#form textarea {
+    width: 100%;
+    background: #6a7d8b60;
+    border: none;
+    outline: none;
+    resize: none;
+    transition: 0.25s ease;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+#form input:focus,
+#form textarea:focus {
+    background: rgb(198, 216, 255);
+}
+
+#form input {
+    height: 30px;
+    padding: 7px 10px;
+    margin: 10px 0;
+}
+
+#form textarea {
+    padding: 7px 10px;
+    margin: 10px 0 -10px 0;
+}
+
+#phone {
+    width: 80% !important;
+}
+
+.input-box {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-box label {
+    font-weight: 600;
+    font-size: 0.9em;
+    position: relative;
+}
+
+label b {
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+#submit {
+    background: var(--celeste-claro) !important;
+    height: 40px !important;
+    color: #fff;
+    font-weight: 700;
+    transition: ease;
+    box-shadow: 0 3px 0 #286385;
+}
+
+#submit:active {
+    transform: scale(0.95);
+}
+
+#submit~p {
+    font-size: 0.7em;
+}
+
+#submit~p a {
+    color: var(--celeste-claro);
+}
