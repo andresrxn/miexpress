@@ -322,40 +322,59 @@
             <h2>¿Más información?</h2>
             <p>¡Contáctanos y nos comunicaremos rápidamente contigo!</p>
             <div class="form-container">
-                <div class="form-img wow opacity" style="opacity: 0;" data-wow-offset="50"></div>
+                <div class="form-img wow opacity" style="opacity: 0;" data-wow-offset="0"></div>
 
-                <form action="contact.php" id="form" name="form" class="wow opacity" data-wow-offset="50" style="opacity: 0;">
-                    <div class="input-box">
+                <form action="contact.php" method="POST" id="form" class="wow opacity" data-wow-offset="0" style="opacity: 0;">
+                    <div class="input-box input-name">
                         <label for="name">Nombre Completo</label>
-                        <input type="text" id="name" name="name" required autocomplete="off" minlength="6" maxlength="40">
+                        <input type="text" id="name" name="name" autocomplete="off" minlength="6" maxlength="40">
+                        <p class="input-error">
+                            Ingrese un nombre válido entre 6 y 40 caracteres.
+                        </p>
+                    </div>
+                    <div class="input-box input-email">
+                        <label for="email">Correo Eléctronico</label>
+                        <input type="email" id="email" name="email" autocomplete="off" minlength="10" maxlength="40">
+                        <p class="input-error">
+                            La dirección de correo es incorrecta.
+                        </p>
+                    </div>
 
+                    <div class="input-box input-phone">
+                        <label for="number">Teléfono <b>(Opcional)</b></label>
+                        <input type="number" id="phone" name="phone" autocomplete="off" minlength="7" maxlength="20">
+                        <p class="input-error">
+                            El número telefónico es invalido.
+                        </p>
                     </div>
                     <div class="input-box">
-                        <label for="name">Correo Eléctronico</label>
-                        <input type="email" id="email" name="email" required autocomplete="off" minlength="10" maxlength="40">
+                        <label for="subject">Asunto </label>
+                        <select name="subject" id="sub">
+                           <option value="Programar Pedido">Programar Pedido</option>
+                           <option value="Solicitud de información">Solicitar información</option>
+                           <option value="Pregunta/Duda">Pregunta/Duda</option>
+                           <option value="Comentario">Comentario</option>
+                           <option value="Queja">Queja</option>
+                           <option value="Otro...">Otro...</option>
+                       </select>
 
                     </div>
-
-                    <div class="input-box">
-                        <label for="name">Teléfono <b>(Opcional)</b></label>
-                        <input type="number" id="phone" name="phone" required autocomplete="off" minlength="7" maxlength="20">
-
-                    </div>
-                    <div class="input-box">
-                        <label for="name">Asunto </label>
-                        <input type="text" id="subject" name="subject" required autocomplete="off" maxlength="40" minlength="5">
-
-                    </div>
-                    <div class="input-box">
-                        <label for="name">Tu Mensaje</label>
-                        <textarea name="msg" id="msg" cols="30" rows="10" required autocomplete="off" maxlength="400" minlength="10"></textarea>
-
+                    <div class="input-box input-msg">
+                        <label for="msg">Tu Mensaje</label>
+                        <textarea name="msg" id="msg" cols="30" rows="10" autocomplete="off" maxlength="400" minlength="10"></textarea>
+                        <p class="input-error">
+                            El mensaje debe contener de 10 a 400 caracteres.
+                        </p>
                     </div>
                     <div class="input-submit">
-                        <input type="submit" value="Enviar Mensaje" id="submit">
+                        <input type="submit" value="Enviar Mensaje" id="btnSubmit">
                         <p>Al hacer click en enviar acuerdas con nuestra <a href="">Política de Privacidad</a> y los <a href="">Términos y Condiciones</a></p>
+                        <p class="input-error">
+                            Complete correctamente todos los campos.
+                        </p>
                     </div>
                 </form>
+
             </div>
         </section>
     </main>
